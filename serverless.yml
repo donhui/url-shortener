@@ -1,0 +1,17 @@
+component: flask
+name: url-shortener
+app: url-shortener
+inputs:
+  src:
+    hook: pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt -t ./
+    dist: ./
+    exclude:
+      - .env
+  region: ap-guangzhou
+  runtime: Python3.6
+  apigatewayConf:
+    protocols:
+      - http
+      - https
+    environment: release
+
